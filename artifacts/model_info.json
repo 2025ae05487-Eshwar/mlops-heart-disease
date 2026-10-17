@@ -1,0 +1,41 @@
+{
+    "selected_model": "Logistic Regression",
+    "selection_metric": "mean five-fold cross-validation ROC-AUC",
+    "best_cv_roc_auc": 0.9113442113442114,
+    "best_parameters": {
+        "classifier__C": 0.1,
+        "classifier__class_weight": null
+    },
+    "feature_columns": [
+        "age",
+        "trestbps",
+        "chol",
+        "thalach",
+        "oldpeak",
+        "ca",
+        "sex",
+        "cp",
+        "fbs",
+        "restecg",
+        "exang",
+        "slope",
+        "thal"
+    ],
+    "target_column": "target",
+    "test_size": 0.2,
+    "random_state": 42,
+    "cv_folds": 5,
+    "selected_model_metrics": {
+        "model": "Logistic Regression",
+        "cv_accuracy": 0.8511054421768707,
+        "cv_precision": 0.8775589656152315,
+        "cv_recall": 0.7920948616600791,
+        "cv_roc_auc": 0.9113442113442114,
+        "test_accuracy": 0.8852459016393442,
+        "test_precision": 0.8387096774193549,
+        "test_recall": 0.9285714285714286,
+        "test_f1": 0.8813559322033898,
+        "test_roc_auc": 0.9610389610389611,
+        "best_parameters": "{\"classifier__C\": 0.1, \"classifier__class_weight\": null}"
+    }
+}

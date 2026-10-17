@@ -1,0 +1,36 @@
+
+# Python virtual environment
+.venv/
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Environment variables and secrets
+.venv
+.venv.*
+!.venv.example
+.pyc
+
+# Jupyter and editor files
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# MLflow local tracking
+mlruns/
+mlflow.db
+mlflow.db-shm
+mlflow.db-wal/
+
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

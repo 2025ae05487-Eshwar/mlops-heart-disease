@@ -1,0 +1,10 @@
+{
+    "rows": 303,
+    "columns": 14,
+    "features": 13,
+    "missing_values_total": 6,
+    "target_distribution": {
+        "0": 164,
+        "1": 139
+    }
+}
