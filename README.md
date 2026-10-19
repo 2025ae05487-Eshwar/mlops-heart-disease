@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Heart Disease Prediction — End-to-End MLOps Project
 
 An end-to-end Machine Learning Operations (MLOps) project for binary heart disease classification using the UCI Cleveland Heart Disease dataset. The project covers data collection, preprocessing, exploratory data analysis, model training, hyperparameter tuning, model evaluation, experiment tracking with MLflow, and model deployment through a FastAPI REST API. Docker and Docker Compose configuration are included for containerization.
@@ -1155,3 +1156,7 @@ The project demonstrates the integration of machine learning development, experi
 - MLflow for experiment tracking.
 - FastAPI for API development.
 - Docker for application containerization.
+=======
+# mlops-heart-disease
+A ML project with End to End pipeline on deploying a ML model
+>>>>>>> 267a43ecdd8bc656d9d9059031357dc62a12128c
