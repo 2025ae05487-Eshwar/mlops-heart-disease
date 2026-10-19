@@ -129,7 +129,7 @@ The main objectives are:
 | Development environment | Python virtual environment (`.venv`) |
 | Dataset | UCI Cleveland Heart Disease dataset |
 
-Package versions should be maintained in `requirements.txt`. Docker should use Python 3.10 to match the development environment, subject to compatibility with the pinned dependencies.
+Package versions should be maintained in `requirements.txt`. Docker should use Python 3.12 to match the development environment, subject to compatibility with the pinned dependencies.
 
 ## 5. System Architecture
 
@@ -331,7 +331,7 @@ Some files and directories are generated only after the corresponding scripts ru
 
 Install the following tools:
 
-- Python 3.10
+- Python 3.12
 - Git
 - A code editor such as Visual Studio Code
 - Docker Desktop for Windows, with Docker Compose, for container execution
@@ -369,7 +369,7 @@ python --version
 Expected major and minor version:
 
 ```text
-Python 3.10.x
+Python 3.12.x
 ```
 
 ### Step 3: Install dependencies
@@ -868,7 +868,8 @@ Docker is intended to package the application and its dependencies into a reprod
 
 ### 16.1 Dockerfile
 
-The Dockerfile is configured to use Python 3.10 and:
+The Dockerfile is configured to use Python 3.12
+and:
 
 - Set the working directory.
 - Install dependencies from `requirements.txt`.
