@@ -7,6 +7,7 @@ import joblib
 import pandas as pd
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
+from prometheus_fastapi_instrumentator import Instrumentator
 
 
 # Project paths
@@ -20,6 +21,13 @@ app = FastAPI(
         "from patient feature values."
     ),
     version="1.0.0",
+)
+
+# Expose Prometheus request metrics at /metrics.
+Instrumentator().instrument(app).expose(
+    app,
+    endpoint="/metrics",
+    include_in_schema=False,
 )
 
 # Load the trained pipeline once when the API module starts.

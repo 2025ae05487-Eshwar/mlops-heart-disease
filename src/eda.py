@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = PROJECT_ROOT / "data" / "processed" / "heart_disease_clean.csv"
 FIGURES_DIR = PROJECT_ROOT / "reports" / "figures"
 REPORTS_DIR = PROJECT_ROOT / "reports"
