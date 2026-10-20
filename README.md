@@ -1,4 +1,4 @@
-**# Heart Disease Prediction — End-to-End MLOps Project**
+# Heart Disease Prediction — End-to-End MLOps Project
 
 
 
@@ -6,70 +6,39 @@ An end-to-end Machine Learning Operations (MLOps) project for binary heart disea
 
 
 
-**---**
+---
 
 
 
-**## Table of Contents**
+## Table of Contents
 
+1. [Project Overview](#1-project-overview)
+2. [Objectives](#2-objectives)
+3. [Key Features](#3-key-features)
+4. [Technology Stack](#4-technology-stack)
+5. [System Architecture](#5-system-architecture)
+6. [Dataset Description](#6-dataset-description)
+7. [Project Structure](#7-project-structure)
+8. [Installation and Setup](#8-installation-and-setup)
+9. [Data Collection and Preprocessing](#9-data-collection-and-preprocessing)
+10. [Exploratory Data Analysis](#10-exploratory-data-analysis)
+11. [Model Development](#11-model-development)
+12. [Model Evaluation and Results](#12-model-evaluation-and-results)
+13. [MLflow Experiment Tracking](#13-mlflow-experiment-tracking)
+14. [FastAPI Model Serving](#14-fastapi-model-serving)
+15. [API Documentation and Testing](#15-api-documentation-and-testing)
+16. [Docker, Kubernetes, and Monitoring](#16-docker-kubernetes-and-monitoring)
+17. [Git and Version Control](#17-git-and-version-control)
+18. [Reproducibility](#18-reproducibility)
+19. [Current Project Status](#19-current-project-status)
+20. [Future Enhancements](#20-future-enhancements)
+21. [Limitations](#21-limitations)
+22. [Disclaimer](#22-disclaimer)
+23. [Author](#23-author)
 
+---
 
-**1.&#x20;**[Project Overview]\(#1-project-overview)
-
-**2.&#x20;**[Objectives]\(#2-objectives)
-
-**3.&#x20;**[Key Features]\(#3-key-features)
-
-**4.&#x20;**[Technology Stack]\(#4-technology-stack)
-
-**5.&#x20;**[System Architecture]\(#5-system-architecture)
-
-**6.&#x20;**[Dataset Description]\(#6-dataset-description)
-
-**7.&#x20;**[Project Structure]\(#7-project-structure)
-
-**8.&#x20;**[Installation and Setup]\(#8-installation-and-setup)
-
-**9.&#x20;**[Data Collection and Preprocessing]\(#9-data-collection-and-preprocessing)
-
-**10.&#x20;**[Exploratory Data Analysis]\(#10-exploratory-data-analysis)
-
-**11.&#x20;**[Model Development]\(#11-model-development)
-
-**12.&#x20;**[Model Evaluation and Results]\(#12-model-evaluation-and-results)
-
-**13.&#x20;**[MLflow Experiment Tracking]\(#13-mlflow-experiment-tracking)
-
-**14.&#x20;**[FastAPI Model Serving]\(#14-fastapi-model-serving)
-
-**15.&#x20;**[API Documentation and Testing]\(#15-api-documentation-and-testing)
-
-**16.&#x20;**[Docker, Kubernetes, and Monitoring]\(#16-docker-kubernetes-and-monitoring)
-
-**17.&#x20;**[Git and Version Control]\(#17-git-and-version-control)
-
-**18.&#x20;**[Reproducibility]\(#18-reproducibility)
-
-**19.&#x20;**[Current Project Status]\(#19-current-project-status)
-
-**20.&#x20;**[Future Enhancements]\(#20-future-enhancements)
-
-**21.&#x20;**[Limitations]\(#21-limitations)
-
-**22.&#x20;**[Disclaimer]\(#22-disclaimer)
-
-**23.&#x20;**[Author]\(#23-author)
-
-
-
-**---**
-
-
-
-**## 1. Project Overview**
-
-
-
+## 1. Project Overview
 Heart disease is a major global health concern. Machine learning can help analyze clinical measurements and identify patterns associated with the presence of heart disease.
 
 
@@ -114,10 +83,7 @@ The selected model is saved as a serialized artifact and integrated into a FastA
 
 
 
-**## 2. Objectives**
-
-
-
+## 2. Objectives
 The main objectives are:
 
 
@@ -150,14 +116,8 @@ The main objectives are:
 
 
 
-**## 3. Key Features**
-
-
-
-**### Data pipeline**
-
-
-
+## 3. Key Features
+### Data pipeline
 **-&#x20;**&#x52;aw and processed dataset separation.
 
 **-&#x20;**&#x44;ata cleaning and missing-value handling.
@@ -168,10 +128,7 @@ The main objectives are:
 
 
 
-**### Model development**
-
-
-
+### Model development
 **-&#x20;**&#x4C;ogistic Regression and Random Forest comparison.
 
 **-&#x20;**&#x53;tratified five-fold cross-validation.
@@ -184,10 +141,7 @@ The main objectives are:
 
 
 
-**### Experiment tracking**
-
-
-
+### Experiment tracking
 **-&#x20;**&#x4D;Lflow experiment organization.
 
 **-&#x20;**&#x53;QLite-backed tracking storage.
@@ -198,10 +152,7 @@ The main objectives are:
 
 
 
-**### Model serving**
-
-
-
+### Model serving
 **-&#x20;**&#x46;astAPI REST API.
 
 **-&#x20;**&#x49;nput validation using Pydantic.
@@ -214,10 +165,7 @@ The main objectives are:
 
 
 
-**### Deployment preparation**
-
-
-
+### Deployment preparation
 **-&#x20;**&#x50;ython dependency management.
 
 **-&#x20;**&#x44;ockerfile.
@@ -230,10 +178,7 @@ The main objectives are:
 
 
 
-**## 4. Technology Stack**
-
-
-
+## 4. Technology Stack
 \| Category                | Technology                                                               |
 
 |**&#x20;-----------------------&#x20;**|**&#x20;------------------------------------------------------------------------&#x20;**|
@@ -278,58 +223,37 @@ Python package versions are pinned in \`requirements.txt\`. The Docker image use
 
 
 
-**## 5. System Architecture**
-
-
-
+## 5. System Architecture
 The project is organized into five major stages.
 
 
 
-**### Stage 1: Data ingestion and preprocessing**
-
-
-
+### Stage 1: Data ingestion and preprocessing
 The raw dataset is collected and stored under \`data/raw/\`. A preprocessing script cleans the data, handles missing values, and generates the processed dataset under \`data/processed/\`.
 
 
 
-**### Stage 2: Model development**
-
-
-
+### Stage 2: Model development
 Exploratory data analysis is performed to understand the data. A reusable preprocessing pipeline handles numerical and categorical features. Logistic Regression and Random Forest models are trained and evaluated using cross-validation and a held-out test set.
 
 
 
-**### Stage 3: Experiment tracking**
-
-
-
+### Stage 3: Experiment tracking
 Training parameters, metrics, and relevant artifacts are recorded using MLflow. A local SQLite database stores experiment metadata.
 
 
 
-**### Stage 4: Model serving**
-
-
-
+### Stage 4: Model serving
 The selected model is saved to \`artifacts/best_model.joblib\`. The FastAPI application loads this model and exposes REST endpoints for prediction and service health checks.
 
 
 
-**### Stage 5: Containerization and deployment**
-
-
-
+### Stage 5: Containerization and deployment
 A Dockerfile defines how to package the API, dependencies, source code, and model artifact. Kubernetes manifests define the API deployment and service, plus Prometheus and Grafana resources. The repository does not include a Docker Compose file.
 
 
 
-**### Architecture flow**
-
-
-
+### Architecture flow
                  UCI Heart Disease Dataset
 
                             |
@@ -440,14 +364,8 @@ A Dockerfile defines how to package the API, dependencies, source code, and mode
 
 
 
-**## 6. Dataset Description**
-
-
-
-**### Dataset source**
-
-
-
+## 6. Dataset Description
+### Dataset source
 The project uses the Cleveland subset of the UCI Heart Disease dataset.
 
 
@@ -464,10 +382,7 @@ The dataset contains 303 observations and clinical attributes used for heart dis
 
 
 
-**### Input features**
-
-
-
+### Input features
 The following 13 input features are used by the prediction API.
 
 
@@ -508,10 +423,7 @@ The categorical values use the encodings expected by the dataset and trained mod
 
 
 
-**### Target variable**
-
-
-
+### Target variable
 The original target variable is \`num\`.
 
 
@@ -538,10 +450,7 @@ This creates a binary classification problem.
 
 
 
-**### Dataset handling**
-
-
-
+### Dataset handling
 The project separates raw and processed data:
 
 
@@ -556,10 +465,7 @@ The raw dataset should be retained as the source of truth. Cleaning and target t
 
 
 
-**## 7. Project Structure**
-
-
-
+## 7. Project Structure
 The project is organized into scripts, source modules, model artifacts, reports, and deployment configuration.
 
 
@@ -664,14 +570,8 @@ Reports, plots, model artifacts, and \`mlflow\.db\` are generated or updated by 
 
 
 
-**## 8. Installation and Setup**
-
-
-
-**### Prerequisites**
-
-
-
+## 8. Installation and Setup
+### Prerequisites
 Install the following tools as needed:
 
 
@@ -686,10 +586,7 @@ Install the following tools as needed:
 
 
 
-**### Step 1: Clone the repository**
-
-
-
+### Step 1: Clone the repository
 Clone the project:
 
 
@@ -704,10 +601,7 @@ cd mlops_heart_disease
 
 
 
-**### Step 2: Create and activate a virtual environment**
-
-
-
+### Step 2: Create and activate a virtual environment
 \`\`\`bash
 
 python3 -m venv .venv
@@ -730,10 +624,7 @@ python --version
 
 
 
-**### Step 3: Install dependencies**
-
-
-
+### Step 3: Install dependencies
 \`\`\`bash
 
 python -m pip install --upgrade pip
@@ -744,10 +635,7 @@ python -m pip install -r requirements.txt
 
 
 
-**### Step 4: Verify the environment**
-
-
-
+### Step 4: Verify the environment
 \`\`\`bash
 
 python -c "import sys; print(sys.executable)"
@@ -760,14 +648,8 @@ The output should point to the project's \`.venv\` environment. On Windows, use 
 
 
 
-**## 9. Data Collection and Preprocessing**
-
-
-
-**### Download the dataset**
-
-
-
+## 9. Data Collection and Preprocessing
+### Download the dataset
 Run the data download script from the project root:
 
 
@@ -796,10 +678,7 @@ Verify that the file exists before running preprocessing.
 
 
 
-**### Preprocess the data**
-
-
-
+### Preprocess the data
 Run:
 
 
@@ -832,10 +711,7 @@ To create the one-hot-encoded CSV as well, run \`python scripts/preprocess_data.
 
 
 
-**### Model preprocessing pipeline**
-
-
-
+### Model preprocessing pipeline
 The reusable preprocessing implementation is in \`src/preprocessing.py\`.
 
 
@@ -872,10 +748,7 @@ Using a pipeline also reduces the risk of applying different transformations to 
 
 
 
-**## 10. Exploratory Data Analysis**
-
-
-
+## 10. Exploratory Data Analysis
 Exploratory data analysis is implemented in:
 
 
@@ -944,10 +817,7 @@ EDA is useful for understanding the data, but observed correlations should not b
 
 
 
-**## 11. Model Development**
-
-
-
+## 11. Model Development
 The training workflow is implemented in:
 
 
@@ -964,10 +834,7 @@ Model definitions are separated into their respective modules.
 
 
 
-**### 11.1 Logistic Regression**
-
-
-
+### 11.1 Logistic Regression
 Implementation:
 
 
@@ -992,10 +859,7 @@ The tuning workflow evaluates different hyperparameter settings, including the r
 
 
 
-**### 11.2 Random Forest**
-
-
-
+### 11.2 Random Forest
 Implementation:
 
 
@@ -1026,10 +890,7 @@ Random Forest can capture nonlinear relationships and interactions between featu
 
 
 
-**### 11.3 Training and validation strategy**
-
-
-
+### 11.3 Training and validation strategy
 The training workflow uses:
 
 
@@ -1054,10 +915,7 @@ The held-out test set is used to assess the selected model's performance on data
 
 
 
-**### 11.4 Model selection**
-
-
-
+### 11.4 Model selection
 The selection criterion is the mean cross-validation ROC-AUC score.
 
 
@@ -1118,18 +976,12 @@ The script reads \`data/processed/heart_disease_clean.csv\`, creates an 80/20 st
 
 
 
-**## 12. Model Evaluation and Results**
-
-
-
+## 12. Model Evaluation and Results
 The following results are from the recorded successful training run. They should be treated as experiment results for this particular dataset split and configuration, not as guaranteed performance on other populations.
 
 
 
-**### 12.1 Cross-validation results**
-
-
-
+### 12.1 Cross-validation results
 \| Metric            | Logistic Regression | Random Forest |
 
 |**&#x20;-----------------&#x20;**|**&#x20;------------------:&#x20;**|**&#x20;------------:&#x20;**|
@@ -1144,10 +996,7 @@ The following results are from the recorded successful training run. They should
 
 
 
-**### 12.2 Held-out test results**
-
-
-
+### 12.2 Held-out test results
 \| Metric    | Logistic Regression | Random Forest |
 
 |**&#x20;---------&#x20;**|**&#x20;------------------:&#x20;**|**&#x20;------------:&#x20;**|
@@ -1164,10 +1013,7 @@ The following results are from the recorded successful training run. They should
 
 
 
-**### 12.3 Interpretation**
-
-
-
+### 12.3 Interpretation
 **\*\*Accuracy\*\*** measures the proportion of correct predictions across both classes.
 
 
@@ -1204,10 +1050,7 @@ The held-out test metrics should be interpreted alongside the dataset size, spli
 
 
 
-**## 13. MLflow Experiment Tracking**
-
-
-
+## 13. MLflow Experiment Tracking
 MLflow is used to track model training experiments.
 
 
@@ -1236,10 +1079,7 @@ Heart Disease Classification
 
 
 
-**### 13.1 Tracking backend**
-
-
-
+### 13.1 Tracking backend
 The project uses a local SQLite tracking database:
 
 
@@ -1260,10 +1100,7 @@ This approach avoids relying on MLflow's legacy filesystem-based tracking backen
 
 
 
-**### 13.2 Information tracked**
-
-
-
+### 13.2 Information tracked
 The tracking utilities support logging:
 
 
@@ -1284,10 +1121,7 @@ The training script integrates with these utilities to record model runs.
 
 
 
-**### 13.3 Start the MLflow UI**
-
-
-
+### 13.3 Start the MLflow UI
 From the project root, with the virtual environment activated:
 
 
@@ -1320,10 +1154,7 @@ Stop the UI with \`Ctrl+C\` when finished.
 
 
 
-**### 13.4 Model serialization**
-
-
-
+### 13.4 Model serialization
 The model is saved locally with Joblib. MLflow model logging uses cloudpickle serialization in the configured helper.
 
 
@@ -1332,10 +1163,7 @@ Serialized model files should only be loaded from trusted sources because deseri
 
 
 
-**### 13.5 Tracking persistence**
-
-
-
+### 13.5 Tracking persistence
 The SQLite database contains local experiment metadata. It should be handled separately from the model artifact and source code.
 
 
@@ -1344,10 +1172,7 @@ For a shared or production environment, a managed tracking server and appropriat
 
 
 
-**## 14. FastAPI Model Serving**
-
-
-
+## 14. FastAPI Model Serving
 The API implementation is:
 
 
@@ -1376,10 +1201,7 @@ The API provides prediction functionality and service checks.
 
 
 
-**### 14.1 Start the API locally**
-
-
-
+### 14.1 Start the API locally
 Activate the virtual environment and run:
 
 
@@ -1396,10 +1218,7 @@ Keep the terminal open while testing the service.
 
 
 
-**### 14.2 Available endpoints**
-
-
-
+### 14.2 Available endpoints
 \| Method | Endpoint   | Purpose                                 |
 
 |**&#x20;------&#x20;**|**&#x20;----------&#x20;**|**&#x20;---------------------------------------&#x20;**|
@@ -1414,10 +1233,7 @@ Keep the terminal open while testing the service.
 
 
 
-**### 14.3 Root endpoint**
-
-
-
+### 14.3 Root endpoint
 Request:
 
 
@@ -1434,10 +1250,7 @@ Returns basic service information, including links to the API documentation and 
 
 
 
-**### 14.4 Health endpoint**
-
-
-
+### 14.4 Health endpoint
 Request:
 
 
@@ -1470,10 +1283,7 @@ This endpoint checks whether the API process is responding. It does not independ
 
 
 
-**### 14.5 Readiness endpoint**
-
-
-
+### 14.5 Readiness endpoint
 Request:
 
 
@@ -1508,10 +1318,7 @@ If the model is unavailable, the endpoint returns HTTP 503.
 
 
 
-**### 14.6 Prediction endpoint**
-
-
-
+### 14.6 Prediction endpoint
 Endpoint:
 
 
@@ -1572,10 +1379,7 @@ This is a sample software-testing payload, not real patient data.
 
 
 
-**### 14.7 Prediction response**
-
-
-
+### 14.7 Prediction response
 The response contains fields similar to:
 
 
@@ -1642,10 +1446,7 @@ The API also exposes \`GET /metrics\` for Prometheus scraping. This endpoint is 
 
 
 
-**### 14.8 Input validation**
-
-
-
+### 14.8 Input validation
 The request schema uses Pydantic field constraints and encoded categories to validate the request.
 
 
@@ -1668,10 +1469,7 @@ Invalid requests should return a validation error rather than being silently acc
 
 
 
-**## 15. API Documentation and Testing**
-
-
-
+## 15. API Documentation and Testing
 FastAPI automatically generates an interactive OpenAPI documentation interface.
 
 
@@ -1694,18 +1492,12 @@ These are manual smoke-test steps, not checked-in test results. There is no auto
 
 
 
-**## 16. Docker, Kubernetes, and Monitoring**
-
-
-
+## 16. Docker, Kubernetes, and Monitoring
 Docker is intended to package the application and its dependencies into a reproducible environment.
 
 
 
-**### 16.1 Dockerfile**
-
-
-
+### 16.1 Dockerfile
 The Dockerfile uses \`python:3.11-slim\` and:
 
 
@@ -1740,10 +1532,7 @@ Binding to \`0.0.0.0\` inside the container allows the service to accept connect
 
 
 
-**### 16.2 Build and run the Docker image**
-
-
-
+### 16.2 Build and run the Docker image
 There is no Docker Compose file. Build and run the API image directly:
 
 
@@ -1762,10 +1551,7 @@ The \`dev\` tag is intentional: it matches \`image: heart-disease-api:dev\` in \
 
 
 
-**### 16.3 Verify the containerized application**
-
-
-
+### 16.3 Verify the containerized application
 After the container starts, test:
 
 
@@ -1800,10 +1586,7 @@ docker info
 
 
 
-**### 16.4 Deploy to Minikube**
-
-
-
+### 16.4 Deploy to Minikube
 Start Minikube using Docker, build the image in Minikube's image environment, and apply all manifests:
 
 
@@ -1862,10 +1645,7 @@ kubectl describe deployment heart-disease-api
 
 
 
-**### 16.5 Prometheus and Grafana**
-
-
-
+### 16.5 Prometheus and Grafana
 \`k8s/monitoring.yaml\` deploys Prometheus and Grafana in the default namespace. Prometheus is configured to scrape the API at \`/metrics\`; the FastAPI app exposes that endpoint through \`prometheus-fastapi-instrumentator\`. Grafana's Prometheus data source is provisioned automatically, but no dashboard is included in the repository.
 
 
@@ -1904,18 +1684,12 @@ kubectl logs deployment/grafana
 
 
 
-**## 17. Git and Version Control**
-
-
-
+## 17. Git and Version Control
 Git is used to manage the project source code and track changes.
 
 
 
-**### Initialize Git**
-
-
-
+### Initialize Git
 From the project root:
 
 
@@ -1940,10 +1714,7 @@ git status
 
 
 
-**### \`.gitignore\`**
-
-
-
+### \`.gitignore\`
 The \`.gitignore\` file excludes files that should not normally be tracked, including:
 
 
@@ -1968,10 +1739,7 @@ This prevents thousands of environment and cache files from being added accident
 
 
 
-**### \`.dockerignore\`**
-
-
-
+### \`.dockerignore\`
 The \`.dockerignore\` file excludes unnecessary files from the Docker build context, such as:
 
 
@@ -1990,10 +1758,7 @@ The two ignore files serve different purposes: \`.gitignore\` controls Git track
 
 
 
-**### Recommended Git workflow**
-
-
-
+### Recommended Git workflow
 \`\`\`bash
 
 git status
@@ -2030,10 +1795,7 @@ If the saved model is excluded from Git, document how to regenerate or obtain it
 
 
 
-**## 18. Reproducibility**
-
-
-
+## 18. Reproducibility
 The project includes several mechanisms that support repeatable execution:
 
 
@@ -2080,10 +1842,7 @@ For stronger reproducibility, future improvements should include:
 
 
 
-**## 19. Current Project Status**
-
-
-
+## 19. Current Project Status
 The table below distinguishes repository implementation and generated artifacts from runtime checks that must be performed in the target environment.
 
 
@@ -2118,22 +1877,13 @@ The table below distinguishes repository implementation and generated artifacts 
 
 
 
-**## 20. Future Enhancements**
-
-
-
-**### Automated testing**
-
-
-
+## 20. Future Enhancements
+### Automated testing
 Implement pytest tests for preprocessing, model predictions, API responses, invalid inputs, and model loading.
 
 
 
-**### Continuous integration and delivery**
-
-
-
+### Continuous integration and delivery
 Configure GitHub Actions to install dependencies and run automated tests on pushes and pull requests.
 
 
@@ -2142,18 +1892,12 @@ A later pipeline can build the Docker image and publish it to a container regist
 
 
 
-**### Deployment improvements**
-
-
-
+### Deployment improvements
 The repository includes Kubernetes Deployments and Services, probes, and resource requests and limits. Useful next steps are to validate the manifests in CI, add secrets/configuration management where needed, and document successful Minikube results.
 
 
 
-**### Monitoring and observability**
-
-
-
+### Monitoring and observability
 Extend the service with structured logging and monitoring for:
 
 
@@ -2176,18 +1920,12 @@ The API already exposes Prometheus metrics at \`/metrics\`, and the Kubernetes m
 
 
 
-**### Model governance**
-
-
-
+### Model governance
 Improve model governance by recording model versions, training datasets, evaluation results, and approval criteria. Any model replacement should pass the agreed evaluation and validation checks before deployment.
 
 
 
-**### Model improvement**
-
-
-
+### Model improvement
 Explore threshold tuning, calibration, feature analysis, class-specific performance, and validation on independent datasets.
 
 
@@ -2196,10 +1934,7 @@ Any improvement should be assessed with a consistent evaluation strategy rather 
 
 
 
-**## 21. Limitations**
-
-
-
+## 21. Limitations
 **-&#x20;**&#x54;he dataset contains only 303 observations, limiting the conclusions that can be drawn about generalization.
 
 **-&#x20;**&#x54;he evaluation metrics depend on the dataset split and training configuration.
@@ -2218,10 +1953,7 @@ Any improvement should be assessed with a consistent evaluation strategy rather 
 
 
 
-**## 22. Disclaimer**
-
-
-
+## 22. Disclaimer
 This project is intended for educational, research, and software engineering purposes.
 
 
@@ -2234,10 +1966,7 @@ Do not use this application to make healthcare decisions or to determine whether
 
 
 
-**## 23. Author**
-
-
-
+## 23. Author
 **[Eshwaran ABR](https://github.com/2025ae05487-Eshwar/mlops-heart-disease)**
 
 
@@ -2250,14 +1979,11 @@ The project demonstrates the integration of machine learning development, experi
 
 
 
-**---**
+---
 
 
 
-**## Acknowledgements**
-
-
-
+## Acknowledgements
 **-&#x20;**&#x55;CI Machine Learning Repository for the Heart Disease dataset.
 
 **-&#x20;**&#x73;cikit-learn for preprocessing, model training, and evaluation.
